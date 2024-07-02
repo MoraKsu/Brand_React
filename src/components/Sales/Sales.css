@@ -1,0 +1,81 @@
+.sales {
+    margin-bottom: 97px;
+}
+
+.sales__top {
+    background-color: #222224;
+    display: flex;
+}
+
+.sales__delivery {
+    position: relative;
+    min-width: 767px;
+}
+
+.sales__item {
+    position: absolute;
+    top: 127px;
+    left: 37px;
+}
+
+.sales__title {
+    font-size: 54px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.025em;
+}
+
+.sales__span {
+    font-size: 54px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--base-color-pink);
+    letter-spacing: 0.025em;
+}
+
+.sales__des {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.025em;
+}
+
+.sales__advantages__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.sales__advantages__item {
+    display: flex;
+    align-items: flex-start;
+    height: 148px;
+    padding-top: 29px;
+}
+
+.sales__advantages__img {
+    min-height: 40px;
+    min-width: 45px;
+    padding-left: 30px;
+}
+
+.sales__advantages_text {
+    color: #fbfbfb;
+    padding-left: 32px;
+    padding-right: 26px;
+}
+
+.sales__advantages__title {
+    line-height: 40px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+}
+
+.sales__advantages__des {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 300;
+    letter-spacing: 0.025em;
+}

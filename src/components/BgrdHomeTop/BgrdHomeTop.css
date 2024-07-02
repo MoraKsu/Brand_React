@@ -1,0 +1,65 @@
+  /* Общие стили */
+  * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+}
+
+.center {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+}
+
+.bagrd {
+    position: relative;
+    height: 450px;
+  }
+  
+  .bagrd__position {
+    display: flex;
+    justify-content: center;
+    background-color: #E8E8E8;
+    top: -1px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  
+  .bagrd__content {
+    padding-top: 300px;
+  }
+  
+  .bagrd__info {
+    border-left: 12px solid #F16D7F;
+    padding-left: 16px;
+  }
+  
+  .bagrd__title {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--base-color-text);
+  }
+  
+  .bagrd__heading {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--base-color-text);
+  }
+  
+  .bagrd__span {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--base-color-pink);
+  }
+  

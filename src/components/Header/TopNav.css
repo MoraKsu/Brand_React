@@ -1,0 +1,140 @@
+:root {
+    --base-color-pink: #f16d7f;
+    --base-color-text: #222222;
+  }
+
+  /* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1170px;
+}
+
+.center {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+}
+  
+/* Стили топ навигация */
+
+.top {
+    position: relative;
+}
+  
+.top__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+  
+.top__nav-items {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+  
+.top__nav-item {
+    position: relative;
+}
+  
+.top__nav-link {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--base-color-text);
+    padding: 20px;
+}
+  
+.top__mega__box {
+    padding: 20px;
+    border: 1px solid #e8e8e8;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 30px;
+    display: none;
+    z-index: 20;
+}
+  
+.top__mega__item {
+    margin-right: 46px;
+}
+  
+.top__mega__title {
+    width: 235px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: var(--base-color-text);
+}
+  
+.top__mega__link {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.025em;
+    color: #646464;
+    display: block;
+}
+  
+.top__mega__link:hover {
+    color: var(--base-color-pink);
+}
+  
+.top__mega__item:last-of-type {
+    margin-right: 0;
+}
+  
+.top__mega__box::before {
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    background-color: #fff;
+    position: absolute;
+    top: -9px;
+    left: 30px;
+    transform: rotate(45deg);
+    border-top: 1px solid #e8e8e8;
+    border-left: 1px solid #e8e8e8;
+}
+  
+.top__nav-item:hover .top__mega__box {
+    display: flex;
+}
+  
+.last:hover .top__mega__box {
+    right: 0;
+    left: auto;
+}
+  
+.last:hover .top__mega__box::before {
+    right: 35px;
+    left: auto;
+}
+  
+
+  
