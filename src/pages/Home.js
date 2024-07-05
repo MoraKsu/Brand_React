@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import TopNav from '../components/Header/TopNav';
 import Header from '../components/Header/Header';
 import BgrdHomeTop from '../components/BgrdHomeTop/BgrdHomeTop';
@@ -8,20 +8,21 @@ import Reviews from '../components/Reviews/Reviews';
 import Footer from '../components/Footer/Footer';
 import FooterSoc from '../components/Footer/FooterSoc';
 
-const Home = () => {
-  const [cart, setCart] = React.useState([]);
+const Home = ({ addToCart, cart, removeFromCart, updateQuantity }) => {
+  const [products, setProducts] = useState([]);
 
-  const addToCart = (product) => {
-    setCart((prevCart) => [...prevCart, product]);
-  };
+  useEffect(() => {
+    const productsData = require('../data/products.json');
+    setProducts(productsData);
+  }, []);
 
   return (
     <div>
-      <Header cart={cart} />
+      <Header cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />
       <TopNav />
       <BgrdHomeTop />
       <PromoHome />
-      <Product addToCart={addToCart} />
+      <Product products={products} addToCart={addToCart} />
       <Reviews />
       <Footer />
       <FooterSoc />

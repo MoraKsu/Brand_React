@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, MenuItem, Button } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -54,10 +54,9 @@ const CustomButton = styled(Button)({
   },
 });
 
-function Header({ cart, handleRemoveFromCart }) {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [value, setValue] = useState(2);
-  const [isBasketOpen, setIsBasketOpen] = useState(false);
+function Header({ cart, removeFromCart, updateQuantity }) {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [isBasketOpen, setIsBasketOpen] = React.useState(false);
 
   const basketFunction = () => {
     setIsBasketOpen(!isBasketOpen);
@@ -75,7 +74,7 @@ function Header({ cart, handleRemoveFromCart }) {
     <header className="header container center">
       <div className="header__head">
         <div className="header__left">
-          <Link to="/"><img className="header__logo" src={logo} alt="logo" /></Link>
+          <Link to="/Brand_React"><img className="header__logo" src={logo} alt="logo" /></Link>
           <div className="header__form">
             <CustomButton
               aria-controls="browse-menu"
@@ -153,32 +152,43 @@ function Header({ cart, handleRemoveFromCart }) {
           <div className="header__basket">
             <div className="header__basket-drd" onClick={basketFunction}>
               <img src={basketImg} alt="basket" />
-              {cart.length > 0 && (
-                <div className="header__basket-count">
-                  {cart.length}
-                </div>
-              )}
+              {cart.length > 0 && <span className="header__basket-count">{cart.length}</span>}
               {isBasketOpen && (
-                <div className={`header__content-basket ${isBasketOpen ? 'show' : ''}`} id="basketDropdown">
+                <div className="header__content-basket show" id="basketDropdown">
                   {cart.map((item, index) => (
-                    <div className="header__basket-item-container" key={index}>
-                      <Link to={`/singlePage/${item.id}`} className="header__basket-box">
-                        <div className="header__basket-img">
-                          <img src={item.image} alt={item.title} />
-                        </div>
+                    <div className="header__basket-item-container" key={item.id}>
+                      <div className="header__basket-box">
+                        <Link to={`/singlePage/${item.id}`}>
+                          <div className="header__basket-img">
+                            <img src={require(`../../${item.image}`)} alt={item.title} />
+                          </div>
+                        </Link>
                         <div className="header__basket-item">
                           <p className="header__basket-text">{item.title}</p>
+                          <p className="cart__color"><b>Color:</b> <span style={{ fontWeight: 300, padding: '5px' }}>{item.color}</span></p>
+                          <p className="cart__size"><b>Size:</b> <span style={{ fontWeight: 300, padding: '5px' }}>{item.size}</span></p>
                           <Rating
                             name="simple-controlled"
-                            value={value}
+                            value={item.rating || 0}
                             onChange={(event, newValue) => {
-                              setValue(newValue);
+                              // updateQuantity(item.id, newValue); // Неправильное использование функции обновления рейтинга.
                             }}
                           />
                           <p className="header__basket-cash">1 x {item.price}</p>
+                          <div className="cart__number-container">
+                            <input
+                              type="number"
+                              name="quantity"
+                              min="1"
+                              max="30"
+                              value={item.quantity || 1}
+                              className="cart__number"
+                              onChange={(e) => updateQuantity(item.id, e.target.value)}
+                            />
+                          </div>
                         </div>
-                      </Link>
-                      <div className="header__basket-times" onClick={() => handleRemoveFromCart(item.id)}>
+                      </div>
+                      <div className="header__basket-times" onClick={() => removeFromCart(item.id)}>
                         <CloseIcon />
                       </div>
                       {index < cart.length - 1 && <hr />}
@@ -188,7 +198,7 @@ function Header({ cart, handleRemoveFromCart }) {
                   <div className="header__basket-total">
                     <p className="total">TOTAL</p>
                     <p className="price">
-                      ${cart.reduce((total, item) => total + parseFloat(item.price.slice(1)), 0).toFixed(2)}
+                      ${cart.reduce((total, item) => total + parseFloat(item.price.slice(1)) * (item.quantity || 1), 0).toFixed(2)}
                     </p>
                   </div>
                   <div className="header__basket-btn">
@@ -211,5 +221,3 @@ function Header({ cart, handleRemoveFromCart }) {
 }
 
 export default Header;
-
-

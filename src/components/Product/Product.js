@@ -3,58 +3,7 @@ import { Link } from 'react-router-dom';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import './Product.css';
 
-const products = [
-  {
-    id: 1,
-    image: '/img/card_1.png',
-    title: 'MANGO PEOPLE T-SHIRT',
-    price: '$52.00',
-  },
-  {
-    id: 2,
-    image: '/img/card_2.png',
-    title: 'MANGO PEOPLE T-SHIRT',
-    price: '$52.00',
-  },
-  {
-    id: 3,
-    image: '/img/card_3.png',
-    title: 'MANGO PEOPLE T-SHIRT',
-    price: '$52.00',
-  },
-  {
-    id: 4,
-    image: '/img/card_4.png',
-    title: 'MANGO PEOPLE T-SHIRT',
-    price: '$52.00',
-  },
-  {
-    id: 5,
-    image: '/img/card_5.png',
-    title: 'MANGO PEOPLE T-SHIRT',
-    price: '$52.00',
-  },
-  {
-    id: 6,
-    image: '/img/card_6.png',
-    title: 'MANGO PEOPLE T-SHIRT',
-    price: '$52.00',
-  },
-  {
-    id: 7,
-    image: '/img/card_7.png',
-    title: 'MANGO PEOPLE T-SHIRT',
-    price: '$52.00',
-  },
-  {
-    id: 8,
-    image: '/img/card_8.png',
-    title: 'MANGO PEOPLE T-SHIRT',
-    price: '$52.00',
-  },
-];
-
-const Product = ({ addToCart }) => {
+const Product = ({ products, addToCart }) => {
   return (
     <section className="product container center">
       <h3 className="product__title">Featured Items</h3>
@@ -63,7 +12,7 @@ const Product = ({ addToCart }) => {
         {products.map((product) => (
           <div className="product__card" key={product.id}>
             <Link to={`/singlePage/${product.id}`} className="product__link">
-              <img src={product.image} alt={product.title} className="product__img" />
+              <img src={require(`../../${product.image}`)} alt={product.title} className="product__img" />
               <div className="card__item">
                 <p className="card__title">{product.title}</p>
                 <p className="card__price">{product.price}</p>
@@ -108,4 +57,3 @@ const Product = ({ addToCart }) => {
 };
 
 export default Product;
-

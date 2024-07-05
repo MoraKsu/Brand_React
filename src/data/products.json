@@ -1,0 +1,74 @@
+[
+    {
+      "id": 1,
+      "title": "Mango People T-shirt",
+      "image": "img/card_1.png",
+      "rating": 4.5,
+      "color": "Red",
+      "size": "XL",
+      "price": "$52.00"
+    },
+    {
+      "id": 2,
+      "title": "Mango People T-shirt",
+      "image": "img/card_2.png",
+      "rating": 4.0,
+      "color": "Blue",
+      "size": "L",
+      "price": "$52.00"
+    },
+    {
+      "id": 3,
+      "title": "Mango People T-shirt",
+      "image": "img/card_3.png",
+      "rating": 3.5,
+      "color": "Green",
+      "size": "M",
+      "price": "$52.00"
+    },
+    {
+      "id": 4,
+      "title": "Mango People T-shirt",
+      "image": "img/card_4.png",
+      "rating": 5.0,
+      "color": "Yellow",
+      "size": "S",
+      "price": "$52.00"
+    },
+    {
+      "id": 5,
+      "title": "Mango People T-shirt",
+      "image": "img/card_5.png",
+      "rating": 4.0,
+      "color": "Black",
+      "size": "M",
+      "price": "$52.00"
+    },
+    {
+      "id": 6,
+      "title": "Mango People T-shirt",
+      "image": "img/card_6.png",
+      "rating": 3.5,
+      "color": "White",
+      "size": "L",
+      "price": "$52.00"
+    },
+    {
+      "id": 7,
+      "title": "Mango People T-shirt",
+      "image": "img/card_7.png",
+      "rating": 4.5,
+      "color": "Orange",
+      "size": "XL",
+      "price": "$52.00"
+    },
+    {
+      "id": 8,
+      "title": "Mango People T-shirt",
+      "image": "img/card_8.png",
+      "rating": 4.0,
+      "color": "Pink",
+      "size": "S",
+      "price": "$52.00"
+    }
+  ]

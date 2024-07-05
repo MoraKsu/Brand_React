@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Footer.css'; // Ensure the path is correct
+import './Footer.css';
 import logoImg from '../../img/logo.png';
 
 const Footer = () => {
@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer container center">
       <div className="footer__info">
         <div className="footer__brand">
-        <Link to="/"><img src={logoImg} alt="logo" /></Link>
+        <Link to="/Brand_React"><img src={logoImg} alt="logo" /></Link>
           <p className="footer__text">
             Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.
           </p>
@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="footer__company">
           <h2 className="footer__title">COMPANY</h2>
           <ul className="footer__items">
-            <li className="footer__item"><Link to="/">Home</Link></li>
+            <li className="footer__item"><Link to="/Brand_React">Home</Link></li>
             <li className="footer__item"><Link to="/catalog">Shop</Link></li>
             <li className="footer__item"><Link to="/about">About</Link></li>
             <li className="footer__item"><Link to="/how-it-works">How It Works</Link></li>

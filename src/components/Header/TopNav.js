@@ -43,7 +43,7 @@ function TopNav() {
         <ul className="top__nav-items">
           {menuItems.map((item, index) => (
             <li key={index} className={`top__nav-item ${item.title === 'HOT DEALS' || item.title === 'FEATURED' ? 'last' : ''}`}>
-              <Link to="/" className="top__nav-link">{item.title}</Link>
+              <Link to="/Brand_React" className="top__nav-link">{item.title}</Link>
               <div className="top__mega__box">
                 {item.special ? (
                   <>
