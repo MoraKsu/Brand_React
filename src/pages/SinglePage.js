@@ -1,19 +1,22 @@
 import React from 'react';
-import TopNav from '../components/Header/TopNav';
 import Header from '../components/Header/Header';
+import TopNav from '../components/Header/TopNav';
+import Breadcrumbs from '../components/Breadcrumbs/Breadcrumbs';
 import Reviews from '../components/Reviews/Reviews';
+
 import Footer from '../components/Footer/Footer';
 import FooterSoc from '../components/Footer/FooterSoc';
-import Breadcrumbs from '../components/Breadcrumbs/Breadcrumbs';
-import ShippingAddress from '../components/ShippingAddress/ShippingAddress';
 
-const Checkout = ({ cart, removeFromCart, updateQuantity }) => {
+
+function SinglePage({ cart, removeFromCart, updateQuantity}) {
+
+
+
   return (
     <div>
       <Header cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />
       <TopNav />
       <Breadcrumbs />
-      <ShippingAddress />
       <div style={{ paddingTop: '100px' }}>
         <Reviews />
       </div>
@@ -21,6 +24,6 @@ const Checkout = ({ cart, removeFromCart, updateQuantity }) => {
       <FooterSoc />
     </div>
   );
-};
+}
 
-export default Checkout;
+export default SinglePage;

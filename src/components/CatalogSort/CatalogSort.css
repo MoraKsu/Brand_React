@@ -1,0 +1,197 @@
+.catalog__sort {
+    display: flex;
+    justify-content: space-between;
+    width: 846px;
+    flex-wrap: wrap
+  }
+  
+  .catalog__sorting {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .catalog__head {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #6f6e6e;
+  }
+  
+  .catalog__sort__items {
+    margin-top: 30px;
+    list-style: none;
+    max-width: 176px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .catalog__sort__link {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #6f6e6e;
+    padding-right: 8px;
+    border-right: 1px solid #dfdfdf;
+  }
+  
+  .catalog__sort__link:hover {
+    color: #f16d7f; /* Use your base color */
+  }
+  
+  .catalog__size__items {
+    margin-top: 30px;
+    list-style: none;
+    max-width: 176px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .catalog__sort__checkbox {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #6f6e6e;
+    display: block;
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .catalog__sort__checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .catalog__sort__checkbox .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 13px;
+    width: 13px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    z-index: -1;
+  }
+  
+  .catalog__sort__checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .catalog__sort__checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .catalog__sort__checkbox input:checked ~ .checkmark {
+    background-color: #f16d7f;
+  }
+  
+  .catalog__sort__checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .catalog__sort__checkbox .checkmark:after {
+    left: 3px;
+    top: 1px;
+    width: 5px;
+    height: 5px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  
+  .catalog__range {
+    width: 265px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .catalog__wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 265px;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  
+  .catalog__container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+  }
+  
+  .slider-track {
+    width: 100%;
+    height: 6px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #f16d7f;
+    border: 1px solid #f16d7f;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -7px;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #f16d7f;
+    border: 1px solid #f16d7f;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -7px;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #f16d7f;
+    border: 1px solid #f16d7f;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -7px;
+  }
+  
+  .catalog__values {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #6f6e6e;
+    margin-top: 5px;
+  }
+
+  
+  

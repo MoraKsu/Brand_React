@@ -1,0 +1,160 @@
+.form {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.form__address {
+    width: 355px;
+}
+
+.form__heading {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--base-color-text);
+}
+
+.form__contact {
+    padding-top: 22px;
+    position: relative;
+}
+
+.form__country,
+.form__state,
+.form__postcode {
+    width: 100%;
+    padding: 16px 0 16px 18px;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    resize: vertical;
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: var(--base-color-text);
+}
+
+.form__contact::after {
+    content: "▼";
+    padding: 0 8px;
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+    top: 40px;
+    z-index: 1;
+    text-align: center;
+    width: 10%;
+    height: 100%;
+    pointer-events: none;
+    box-sizing: border-box;
+    color: #bdbdbd;
+}
+
+.form__country {
+    padding-right: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.form__state::placeholder,
+.form__postcode::placeholder {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #b1b1b1;
+}
+
+.form__submit {
+    padding: 12px 15px;
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+}
+
+.form__submit[value="GET A QUOTE"] {
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+.form__submit[value="Apply coupon"] {
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+.form__submit:hover {
+    background-color: var(--base-color-pink);
+    color: #ffffff;
+    transition: all .3s;
+}
+
+.form__coupon {
+    width: 355px;
+}
+
+.form__text {
+    padding-top: 28px;
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: var(--base-color-text);
+}
+
+.form__total {
+    width: 319px;
+    height: 230px;
+    background-color: #f5f3f3;
+    text-align: end;
+    padding-right: 41px;
+    padding-left: 41px;
+}
+
+.form__sub-total {
+    padding-top: 40px;
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #4a4a4a;
+}
+
+.form__grand-total {
+    padding-top: 14px;
+    padding-bottom: 22px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--base-color-text);
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.form__button {
+    margin-top: 40px;
+}
+
+.form__btn {
+    width: 100%;
+    padding: 19px 62px;
+    border: 1px solid var(--base-color-pink);
+    background-color: var(--base-color-pink);
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.form__btn:hover {
+    border: 1px solid var(--base-color-pink);
+    color: var(--base-color-pink);
+    background-color: #ffffff;
+    transition: all .3s;
+}

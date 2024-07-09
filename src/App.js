@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Checkout from './pages/Checkout';
 import Cart from './pages/Cart';
+import Catalog from './pages/Catalog';
+import SinglePage from './pages/SinglePage';
 
 function App() {
   const [cart, setCart] = useState(() => {
@@ -65,7 +67,8 @@ function App() {
         <Route path="/Brand_React" element={<Home addToCart={addToCart} cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
         <Route path="/checkout" element={<Checkout cart={cart} removeFromCart={removeFromCart} />} />
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} clearCart={clearCart} />} />
-        {/* Other routes */}
+        <Route path="/catalog" element={<Catalog addToCart={addToCart} cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
+        <Route path="/singlePage" element={<SinglePage cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
       </Routes>
     </Router>
   );

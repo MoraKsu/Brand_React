@@ -158,7 +158,7 @@ function Header({ cart, removeFromCart, updateQuantity }) {
                   {cart.map((item, index) => (
                     <div className="header__basket-item-container" key={item.id}>
                       <div className="header__basket-box">
-                        <Link to={`/singlePage/${item.id}`}>
+                        <Link to={`/singlePage`}>
                           <div className="header__basket-img">
                             <img src={require(`../../${item.image}`)} alt={item.title} />
                           </div>

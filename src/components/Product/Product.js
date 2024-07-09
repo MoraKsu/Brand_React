@@ -11,7 +11,7 @@ const Product = ({ products, addToCart }) => {
       <div className="product__cards">
         {products.map((product) => (
           <div className="product__card" key={product.id}>
-            <Link to={`/singlePage/${product.id}`} className="product__link">
+            <Link to={`/singlePage`} className="product__link">
               <img src={require(`../../${product.image}`)} alt={product.title} className="product__img" />
               <div className="card__item">
                 <p className="card__title">{product.title}</p>
