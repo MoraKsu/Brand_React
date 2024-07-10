@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "title": "BLAZE LEGGINGS",
+      "image": "img/like1.png",
+      "rating": 4.5,
+      "color": "Red",
+      "size": "XL",
+      "price": "$52.00"
+    },
+    {
+      "id": 2,
+      "title": "ALEXA SWEATER",
+      "image": "img/card_2.png",
+      "rating": 4.0,
+      "color": "Blue",
+      "size": "L",
+      "price": "$52.00"
+    },
+    {
+      "id": 3,
+      "title": "AGNES TOP",
+      "image": "img/like3.png",
+      "rating": 3.5,
+      "color": "Green",
+      "size": "M",
+      "price": "$52.00"
+    },
+    {
+      "id": 4,
+      "title": "SYLVA SWEATER",
+      "image": "img/like4.png",
+      "rating": 5.0,
+      "color": "Yellow",
+      "size": "S",
+      "price": "$52.00"
+    }
+  ]

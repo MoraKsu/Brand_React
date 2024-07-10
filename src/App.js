@@ -68,7 +68,7 @@ function App() {
         <Route path="/checkout" element={<Checkout cart={cart} removeFromCart={removeFromCart} />} />
         <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} clearCart={clearCart} />} />
         <Route path="/catalog" element={<Catalog addToCart={addToCart} cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
-        <Route path="/singlePage" element={<SinglePage cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
+        <Route path="/singlePage" element={<SinglePage addToCart={addToCart} cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
       </Routes>
     </Router>
   );

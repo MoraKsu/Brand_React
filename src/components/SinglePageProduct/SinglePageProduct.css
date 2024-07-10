@@ -1,0 +1,108 @@
+.single {
+    margin-top: 30px;
+}
+
+.single__title {
+    font-size: 24px;
+    line-height: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #4d4d4d;
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.single__items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.single__card {
+    position: relative;
+    width: 261px;
+}
+
+.single__link {
+    display: block;
+    width: 261px;
+    text-decoration: none;
+}
+.single__img {
+    width: 100%;
+}
+
+
+.single__item {
+    padding: 20px;
+    background-color: #fff;
+    text-align: start;
+}
+
+.single__desc {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #6f6e6e;
+    margin-bottom: 17px;
+}
+
+.single__price {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #f16d7f;
+}
+    
+.single__card-add {
+    position: absolute;
+    top: 98px;
+    left: 25%;  
+    justify-content: center;
+    width: 135px;
+    pointer-events: none;
+    display: none;
+}
+
+.single__add {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 8px;
+    color: #fff;
+    border: 1px solid #fff;
+    pointer-events: all;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.single__txt {
+    font-size: 13px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+    margin-left: 8px;
+}
+
+
+.single__add:hover {
+    box-shadow: 0 0 5px #fff;
+}
+.single__add:hover svg path {
+    fill: #F16D7F;
+}
+
+.single__card:hover {
+    box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.15);
+}
+
+.single__card:hover .single__card-add {
+    display: flex;
+}
+
+.single__card:hover .single__img {
+    filter: brightness(0.5);
+}
